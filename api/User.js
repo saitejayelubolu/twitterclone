@@ -215,22 +215,6 @@ router.post('/tweet', (req, res) => {
             
 })
 
-// just an insert to create a collection, dummy, delete during cleanup
-router.post('/userFollows', (req, res) => {
-    
-    const newUF =new UserFollows({
-        email: "sai@ex.com",
-        hash_tags: ["hi"],
-        user_follow_email_ids: ["s@ex.com"]
-    });
-
-    newUF.save().then(result => {
-            res.json({
-                status: "Success",
-                message: "This user follows is added successfully"
-            });
-        })
-})
 
 //like a tweet
 router.post('/likes', (req, res) => {
